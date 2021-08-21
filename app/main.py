@@ -5,7 +5,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def index() -> str:
-    # transform a dict into an application/json response
     return jsonify({"message": "FixxyStudio LineNotifyService"})
 
 
