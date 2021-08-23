@@ -13,7 +13,3 @@ def SendNoti() -> str:
     
     response = {"message": SendLineNotify('Test From FixxyStudio LineNotifyService')}
     return jsonify(response)
-
-
-if __name__ == '__main__':
-    app.run(debug=False)

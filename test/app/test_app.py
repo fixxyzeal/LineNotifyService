@@ -3,7 +3,7 @@ def test_info(client):
     result = response.get_json()
     assert result is not None
     assert "message" in result
-    assert result["message"] == "FixxyStudioLineNotifyService"
+    assert result["message"] == "FixxyStudio LineNotifyService"
 
 
 def test_hello_greets_greetee(client):
