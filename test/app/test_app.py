@@ -8,7 +8,7 @@ def test_info(client):
 
 def test_hello_greets_greetee(client):
 
-    response = client.get("/sendlinenotify")
+    response = client.post("/sendlinenotify")
     result = response.get_json()
 
     assert response.status_code == 200

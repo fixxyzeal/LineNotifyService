@@ -24,7 +24,7 @@ def GetSetData(set):
             latestPrice = soup.find("td", class_="set-color-red")
         if(latestPrice is None):
             latestPrice = soup.find("td", class_="set-color-black")
-
+        
         result = result + "\n ราคาหุ้น {0} ราคา {1}".format(item.upper(), latestPrice.text.strip())
     
     return str(result)
