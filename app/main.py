@@ -32,7 +32,7 @@ def SendNotify() -> str:
 @app.route("/sendstocknotify", methods=['POST'])
 @auth.login_required
 def SendStockNotify() -> str:
-    sendlist = ['or','ptt','tisco','scc','scgp','kbank']
+    sendlist = ['or','ptt','tisco','scc','scgp','kbank','spvi']
     msg = GetSetData(sendlist)
     print(msg)
     response = {"message": SendLineNotify(msg)}
