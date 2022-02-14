@@ -8,13 +8,13 @@ app = Flask(__name__)
 auth = HTTPBasicAuth()
 
 
-
 @auth.verify_password
 def verify_password(username, password):
-    res = Authenticate(username,password)
+    res = Authenticate(username, password)
     if not res:
         return False
     return True
+
 
 @app.route("/")
 def index() -> str:
@@ -23,7 +23,6 @@ def index() -> str:
 
 @app.route("/sendlinenotify", methods=['POST'])
 def SendNotify() -> str:
-
     response = {"message": SendLineNotify(
         'Test From FixxyStudio LineNotifyService')}
     return jsonify(response)
@@ -37,3 +36,4 @@ def SendStockNotify() -> str:
     print(msg)
     response = {"message": SendLineNotify(msg)}
     return jsonify(response)
+
