@@ -31,9 +31,8 @@ def SendNotify() -> str:
 @app.route("/sendstocknotify", methods=['POST'])
 @auth.login_required
 def SendStockNotify() -> str:
-    sendlist = ['or','amanah','makro','scc','scgp','true','spvi']
+    sendlist = ['or', 'makro', 'scc', 'scgp', 'true', 'spvi']
     msg = GetSetData(sendlist)
     print(msg)
     response = {"message": SendLineNotify(msg)}
     return jsonify(response)
-

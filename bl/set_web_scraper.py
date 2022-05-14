@@ -19,11 +19,8 @@ def GetSetData(set):
         soup = BeautifulSoup(html.content, "html5lib")
 
         # find tags by CSS class
-        latestPrice = soup.find("td", class_="set-color-green")
-        if(latestPrice is None):
-            latestPrice = soup.find("td", class_="set-color-red")
-        if(latestPrice is None):
-            latestPrice = soup.find("td", class_="set-color-black")
+        latestPrice = soup.find("h1", class_="value text-white mb-0 me-2 lh-1")
+   
         
         result = result + "\n ราคาหุ้น {0} ราคา {1}".format(item.upper(), latestPrice.text.strip())
     
